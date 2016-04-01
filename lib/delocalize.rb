@@ -1,3 +1,5 @@
+require 'delocalize/delocalizable_parameters'
+
 if defined?(Rails::Railtie)
   require 'delocalize/railtie'
 elsif defined?(Rails::Initializer)
