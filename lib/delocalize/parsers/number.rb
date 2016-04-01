@@ -7,7 +7,8 @@ module Delocalize
       def parse(value)
         return value unless value.is_a?(String)
 
-        separator, delimiter = I18n.t([:separator, :delimiter], :scope => :'number.format')
+        separator = I18n.t(:separator, :scope => :'number.format')
+        delimiter = I18n.t(:delimiter, :scope => :'number.format')
         value.gsub(delimiter, '').gsub(separator, '.')
       end
     end
